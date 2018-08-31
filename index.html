@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marcadores no áudio</title>
+    <style>
+        body {max-width: 500px; margin: 0 auto; box-sizing: border-box;}
+        .container { width: 100%; margin-top: 24px; display: flex; flex-direction: column; justify-content: center;padding: 20px;}
+        audio { margin-bottom: 20px;}
+        button { display: block; padding: 12px; margin: 8px 0; width: 100%; border: none; background: rgb(51, 70, 153); border-radius: 8px; color: white; font-size: 16px; letter-spacing: -0.02em; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: regular; text-align: left; cursor: pointer;}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <audio id="meuAudio" src="audio.mp3" controls>
+        </audio>
+
+        <button onclick="botao(18)">0:18 - Já vai chegar, já vai chegar... até agora.</button>
+        <button onclick="botao(22)">0:22 - Quero café!!!</button>
+        <button onclick="botao(29)">0:29 - Isso aqui é uma porcaria!</button>
+        <button onclick="botao(34)">0:34 - Merda nenhuma.</button>
+
+    </div>
+
+    <script>
+        var meuAudio = document.getElementById('meuAudio');
+        
+        function botao(currentTime) {meuAudio.currentTime = currentTime;}
+    
+    </script>
+</body>
+</html>
